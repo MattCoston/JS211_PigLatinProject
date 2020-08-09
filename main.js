@@ -12,9 +12,11 @@ const rl = readline.createInterface({
 
 
 const pigLatin = (word) => {
-
-  // Your code here
-
+  let vowels = ['a', 'e', 'i', 'o', 'u']
+  //FOR LOOP ITERATING OVER VOWELS TO CHECK HOW TO CHANGE WORD
+  
+  
+  
 }
 
 // the first function called in the program to get an input from the user
