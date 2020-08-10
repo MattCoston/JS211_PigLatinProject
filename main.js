@@ -11,7 +11,7 @@ const rl = readline.createInterface({
 });
 
 const pigLatinVowelFinder = (word) => {
-  let letters = word.trim().split('')
+  let letters = word.trim().toLowerCase().split('')
   let i = 0
   
   
