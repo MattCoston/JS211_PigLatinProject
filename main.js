@@ -11,7 +11,7 @@ const rl = readline.createInterface({
 });
 
 const pigLatinVowelFinder = (word) => {
-  let letters = word.split('')
+  let letters = word.trim().split('')
   let i = 0
   
   
@@ -35,15 +35,26 @@ const pigLatinVowelFinder = (word) => {
 const pigLatin = (word) => {
   let vowelFound = pigLatinVowelFinder(word)
  if (vowelFound == -1) {
-   return word + 'ay';
+  // if word has no vowels 
+  let noVowelWord =  word + 'ay'
+  return noVowelWord.toLowerCase().trim()
  }
- else if (vowelFound == 0) {
-   //insert conditions here
-    return word + "yay"
+ if (vowelFound == 0) {
+   //if word starts with vowel
+    let vowelWord =  word + "yay"
+    return vowelWord.toLowerCase().trim()
  }
-  //else ( vowelFound > 0) {
-    //create new word using substring??
-  //}
+  if ( vowelFound > 0) { 
+    // breaks word apart in two pieces
+    //substring to the first vowel
+    // secondhalf start the substring at vowelFound
+    //returns full word plus "ay"
+    let firstHalf = word.substring(0, vowelFound)
+    let secondHalf = word.substring(vowelFound)
+    let finalWord = secondHalf + firstHalf + "ay"
+    return finalWord.trim().toLowerCase()
+
+  }
   
 }
 
