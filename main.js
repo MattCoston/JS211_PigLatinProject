@@ -10,12 +10,40 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+const pigLatinVowelFinder = (word) => {
+  let letters = word.split('')
+  let i = 0
+  
+  
+  for(i = 0; i < word.length; i++)
+  {
+      let letter = letters[i]
+      
+      //check if the letter is a vowel.
+      //If letter is a vowel return position
+      let hasVowel = 'aeiou'.includes(letter)
+      if(hasVowel) {
+          return i
+      }
+      
+  }
+  return -1
+
+}
+
 
 const pigLatin = (word) => {
-  let vowels = ['a', 'e', 'i', 'o', 'u']
-  //FOR LOOP ITERATING OVER VOWELS TO CHECK HOW TO CHANGE WORD
-  
-  
+  let vowelFound = pigLatinVowelFinder(word)
+ if (vowelFound == -1) {
+   return word + 'ay';
+ }
+ else if (vowelFound == 0) {
+   //insert conditions here
+    return word + "yay"
+ }
+  //else ( vowelFound > 0) {
+    //create new word
+  //}
   
 }
 
