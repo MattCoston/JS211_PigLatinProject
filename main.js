@@ -42,7 +42,7 @@ const pigLatin = (word) => {
     return word + "yay"
  }
   //else ( vowelFound > 0) {
-    //create new word
+    //create new word using substring??
   //}
   
 }
